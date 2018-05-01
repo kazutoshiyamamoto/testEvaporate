@@ -12,6 +12,7 @@
 		FDD5257C2098D3EE00B56C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD5257A2098D3EE00B56C59 /* Main.storyboard */; };
 		FDD5257E2098D3F100B56C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD5257D2098D3F100B56C59 /* Assets.xcassets */; };
 		FDD525812098D3F100B56C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD5257F2098D3F100B56C59 /* LaunchScreen.storyboard */; };
+		FDD5258A2098D97B00B56C59 /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD525892098D97B00B56C59 /* LTMorphingLabel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FDD5257D2098D3F100B56C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDD525802098D3F100B56C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDD525822098D3F100B56C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDD525892098D97B00B56C59 /* LTMorphingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTMorphingLabel.framework; path = Carthage/Build/iOS/LTMorphingLabel.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDD5258A2098D97B00B56C59 /* LTMorphingLabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				FDD525752098D3EE00B56C59 /* testEvaporate */,
 				FDD525742098D3EE00B56C59 /* Products */,
+				FDD525882098D97A00B56C59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +68,14 @@
 			path = testEvaporate;
 			sourceTree = "<group>";
 		};
+		FDD525882098D97A00B56C59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDD525892098D97B00B56C59 /* LTMorphingLabel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +86,7 @@
 				FDD5256F2098D3EE00B56C59 /* Sources */,
 				FDD525702098D3EE00B56C59 /* Frameworks */,
 				FDD525712098D3EE00B56C59 /* Resources */,
+				FDD5258B2098D9E700B56C59 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -129,6 +142,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FDD5258B2098D9E700B56C59 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LTMorphingLabel.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FDD5256F2098D3EE00B56C59 /* Sources */ = {
@@ -282,6 +312,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DJ3WL36QU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = testEvaporate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +334,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DJ3WL36QU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = testEvaporate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
