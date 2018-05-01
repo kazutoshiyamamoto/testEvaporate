@@ -1,0 +1,9 @@
+{
+  "commitish" : "0.5.6",
+  "iOS" : [
+    {
+      "name" : "LTMorphingLabel",
+      "hash" : "a8085e42d40bdb79b40038f3056c608061a00aacc27b4bdec4d6cfe96c0c402e"
+    }
+  ]
+}
