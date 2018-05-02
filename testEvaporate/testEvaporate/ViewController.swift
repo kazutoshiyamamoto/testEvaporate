@@ -10,21 +10,26 @@ import UIKit
 import LTMorphingLabel
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var testLabel: LTMorphingLabel!
     
+    @IBAction func testButton(_ sender: Any) {
+        
+        testLabel.morphingEffect = .evaporate
+        testLabel.text = "Hello!"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        testLabel.morphingEffect = .evaporate
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
